@@ -1,5 +1,7 @@
-# ISGA.github.io
+# Inder Gandhi
 
-Cursor
+Public executive portfolio for Inder Gandhi.
 
-For professional links, see the [About Me page](https://isga.github.io/inder-gandhi/).
+The live site is available at:
+
+https://isga.github.io/
