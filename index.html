@@ -25,6 +25,11 @@
       document.documentElement.setAttribute("data-theme", theme);
     })();
   </script>
+  <script>
+    if (!new URLSearchParams(window.location.search).has("clawpilotTheme")) {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+  </script>
 
   <style>
     :root {
@@ -1460,6 +1465,7 @@
       ],
       "sameAs": [
         "https://www.linkedin.com/in/indermeet/",
+        "https://scholar.google.com/citations?user=UKyyW5AAAAAJ&hl=en",
         "https://patents.google.com/?inventor=indermeet+Gandhi&oq=inventor:(indermeet+Gandhi)&sort=new",
         "https://github.com/ISGA",
         "https://web.archive.org/web/20241103090246/https://www.lineaje.com/about-us"
@@ -1509,6 +1515,12 @@
           </a>
           <a class="button secondary" href="https://www.linkedin.com/in/indermeet/" target="_blank" rel="noopener noreferrer">
             LinkedIn
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M14 5h5v5M10 14 19 5M19 14v5H5V5h5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a class="button secondary" href="https://scholar.google.com/citations?user=UKyyW5AAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">
+            Google Scholar
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M14 5h5v5M10 14 19 5M19 14v5H5V5h5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -1892,6 +1904,7 @@
       <div class="footer-links">
         <a href="https://github.com/ISGA" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://www.linkedin.com/in/indermeet/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=UKyyW5AAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
         <a href="https://patents.google.com/?inventor=indermeet+Gandhi&amp;oq=inventor:(indermeet+Gandhi)&amp;sort=new" target="_blank" rel="noopener noreferrer">Google Patents</a>
       </div>
     </div>
