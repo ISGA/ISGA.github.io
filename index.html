@@ -918,6 +918,16 @@
     .agent-context::before {
       position: absolute;
       top: -1.4rem;
+      left: calc(30% - 0.12rem);
+      width: 1px;
+      height: 1.4rem;
+      background: var(--cp-border-strong);
+      content: "";
+    }
+
+    .agent-context .agent-node::before {
+      position: absolute;
+      top: -1.4rem;
       left: 50%;
       width: 1px;
       height: 1.4rem;
@@ -1321,6 +1331,10 @@
         display: none;
       }
 
+      .agent-context .agent-node::before {
+        display: none;
+      }
+
       .agent-context-label {
         min-height: 0;
         padding: 0 0 0.35rem;
@@ -1634,9 +1648,9 @@
               Agents can act. <span>That changes the security problem.</span>
             </h2>
             <p class="view-intro">
-              An LLM generates an answer. An agent adds memory, data, tools, and
-              the ability to make changes in real systems. Security has to cover
-              the full path.
+              An LLM generates an answer. An agent harness adds memory, data,
+              tools, and the ability to make changes in real systems. Security
+              has to cover the full path.
             </p>
             <div class="agent-questions">
               <div class="agent-question"><span>01</span><p>Who is the agent acting for?</p></div>
@@ -1667,7 +1681,7 @@
                 <button class="agent-node agent" type="button" data-agent-part="agent" aria-pressed="false">
                   <span class="agent-node-kicker">02</span>
                   <strong>Agent</strong>
-                  <small>Runs the loop</small>
+                  <small>Harness runs the loop</small>
                 </button>
                 <button class="agent-node llm" type="button" data-agent-part="llm" aria-pressed="true">
                   <span class="agent-node-kicker">03</span>
@@ -1688,7 +1702,7 @@
               <div class="agent-context">
                 <div class="agent-context-label">
                   Context
-                  <small>Feeds the LLM</small>
+                  <small>Feeds the agent harness</small>
                 </div>
                 <button class="agent-node memory" type="button" data-agent-part="memory" aria-pressed="false">
                   <span class="agent-node-kicker">M</span>
@@ -1704,7 +1718,7 @@
             </div>
             <div class="agent-detail" aria-live="polite">
               <strong>LLM</strong>
-              <p>Treat model output as untrusted. Test for prompt injection and jailbreaks before a plan can call tools or make changes.</p>
+              <p>The harness sends selected context to the LLM. Treat model output as untrusted and test for prompt injection and jailbreaks before a plan can call tools or make changes.</p>
             </div>
           </div>
         </div>
@@ -2000,20 +2014,20 @@
         copy: "Know who the agent is acting for. Tie every important action to a real identity and clear permission.",
       },
       agent: {
-        title: "Agent",
-        copy: "The agent joins the LLM, memory, data, and tools into a loop. Give that loop only the permissions it needs.",
+        title: "Agent harness",
+        copy: "The harness assembles memory and data, calls the LLM, chooses tools, and controls what can change. Give it only the permissions it needs.",
       },
       llm: {
         title: "LLM",
-        copy: "Treat model output as untrusted. Test for prompt injection and jailbreaks before a plan can call tools or make changes.",
+        copy: "The harness sends selected context to the LLM. Treat model output as untrusted and test for prompt injection and jailbreaks before a plan can call tools or make changes.",
       },
       memory: {
         title: "Memory",
-        copy: "Control what the agent remembers. Keep poisoned context and private data from changing what the agent does later.",
+        copy: "The harness controls what the agent remembers. Keep poisoned context and private data from changing what the agent does later.",
       },
       data: {
         title: "Data",
-        copy: "Give the agent only the data it needs. Check access again when the task or user changes.",
+        copy: "The harness retrieves only the data the task needs. Check access again when the task or user changes.",
       },
       tools: {
         title: "Tools",
