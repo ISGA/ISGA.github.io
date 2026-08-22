@@ -1,7 +1,7 @@
 # Inder Gandhi
 
-Public executive portfolio for Inder Gandhi.
+Public, scrollable executive portfolio for Inder Gandhi.
 
-The live site is available at:
+The site is a self-contained HTML page with no analytics, cookies, or tracking.
 
-https://isga.github.io/
+Live site: https://isga.github.io/
